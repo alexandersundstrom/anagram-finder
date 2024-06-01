@@ -10,9 +10,7 @@ public class FileReaderTest {
 
     @Test
     public void readFromFile() {
-        List<String> stringsFromFile = FileReader.getStringsFromFile("ordbok-utf8.txt");
+        List<String> stringsFromFile = FileReader.getStringsFromFile("ordbok-less-utf8.txt");
         assertThat(stringsFromFile).isNotEmpty();
     }
-
-
 }
