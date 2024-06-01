@@ -19,6 +19,10 @@ public class FileReader {
         //TODO Check if file exists
 
         InputStream fileStream = ClassLoader.getSystemResourceAsStream(filename);
-        return IOUtils.readLines(fileStream, Charset.defaultCharset());
+        List<String> strings = IOUtils.readLines(fileStream, Charset.defaultCharset());
+
+        return strings.stream()
+                .filter(string -> !string.isBlank())
+                .toList();
     }
 }
