@@ -6,11 +6,11 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class FileReaderTest {
+public class FileReaderUtilTest {
 
     @Test
     public void readFromFile() {
-        List<String> stringsFromFile = FileReader.getStringsFromFile("ordbok-less-utf8.txt");
+        List<String> stringsFromFile = FileReaderUtil.getStringsFromFile("ordbok-less-utf8.txt");
         assertThat(stringsFromFile).isNotEmpty();
     }
 }

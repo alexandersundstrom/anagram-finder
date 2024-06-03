@@ -4,12 +4,11 @@ import org.apache.commons.io.IOUtils;
 
 import java.io.InputStream;
 import java.nio.charset.Charset;
-import java.nio.file.Files;
 import java.util.List;
 
 import static java.util.Objects.isNull;
 
-public class FileReader {
+public class FileReaderUtil {
 
     public static List<String> getStringsFromFile(String filename) {
         if (isNull(filename)) {

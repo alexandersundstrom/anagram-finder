@@ -7,19 +7,31 @@ import java.util.Map;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class AnagramUtilTest {
+public class StringUtilTest {
+
+
+    @Test
+    public void sortStringsAlphabetically() {
+        String hello = "hello";
+        String sorted = StringUtil.sortStringAlphabetically(hello);
+        assertThat(sorted).isEqualTo("ehllo");
+
+        String casedString = "HelLo";
+        String sortedCased = StringUtil.sortStringAlphabetically(casedString);
+        assertThat(sortedCased).isEqualTo("HLelo");
+    }
 
     @Test
     public void getAnagramNonCaseSensitive() {
         List<String> one = List.of("hej", "Hej", "Lars", "Larsa");
-        Map<String, List<String>> anagrams = AnagramUtil.getAllWordsContainingSameLetters(one, false);
+        Map<String, List<String>> anagrams = StringUtil.getAllStringsContainingSameLetters(one, false);
         assertThat(anagrams.isEmpty()).isTrue();
     }
 
     @Test
     public void getAnagramCaseSensitive() {
         List<String> one = List.of("hej", "Hej", "Lars", "Larsa");
-        Map<String, List<String>> anagrams = AnagramUtil.getAllWordsContainingSameLetters(one, true);
+        Map<String, List<String>> anagrams = StringUtil.getAllStringsContainingSameLetters(one, true);
         assertThat(anagrams.isEmpty()).isFalse();
         assertThat(anagrams.size()).isEqualTo(1);
         assertThat(anagrams.get("ehj")).isNotNull();
