@@ -35,5 +35,8 @@ public class StringUtilTest {
         assertThat(anagrams.isEmpty()).isFalse();
         assertThat(anagrams.size()).isEqualTo(1);
         assertThat(anagrams.get("ehj")).isNotNull();
+        assertThat(anagrams.get("ehj").size()).isEqualTo(2);
+        assertThat(anagrams.get("ehj").contains("hej")).isTrue();
+        assertThat(anagrams.get("ehj").contains("Hej")).isTrue();
     }
 }

@@ -47,3 +47,11 @@ Start the main method in Main to get the results in the terminal.
 
 ## Tests
 There are junit tests that can be executed for the utils used.
+
+## Improvements
+In i real solution I would look at adding some logs where it might be usefull. I would also look at checking response time
+for getting the anagrams to analyse the effienency of the code.
+
+I like that the code now is clear, and separated so each step can be tested, but if it needs to be optmised, one possible optimization would be to reduce the number of iterations over all the strings. I could read each line from the file and iterate over them at the same time.
+
+I would also look at other solutions to get inspiration.
