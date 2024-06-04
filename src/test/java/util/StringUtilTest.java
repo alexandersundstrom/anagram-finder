@@ -22,6 +22,11 @@ public class StringUtilTest {
     }
 
     @Test
+    public void handleNullWord() {
+        assertThat(StringUtil.sortStringAlphabetically(null)).isNull();
+    }
+
+    @Test
     public void getAnagramNonCaseSensitive() {
         List<String> one = List.of("hej", "Hej", "Lars", "Larsa");
         Map<String, List<String>> anagrams = StringUtil.getAllStringsContainingSameLetters(one, false);
@@ -38,5 +43,11 @@ public class StringUtilTest {
         assertThat(anagrams.get("ehj").size()).isEqualTo(2);
         assertThat(anagrams.get("ehj").contains("hej")).isTrue();
         assertThat(anagrams.get("ehj").contains("Hej")).isTrue();
+    }
+
+    @Test
+    public void handleNullAndEmptyList() {
+        assertThat(StringUtil.getAllStringsContainingSameLetters(null, false).isEmpty()).isTrue();
+        assertThat(StringUtil.getAllStringsContainingSameLetters(List.of(), false).isEmpty()).isTrue();
     }
 }
