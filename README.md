@@ -14,6 +14,7 @@ the letters of another word or expression (http://no.wikipedia.org/wiki/Anagram)
 Each line in the result must contain the words that are anagrams of
 each other. For example like this
 
+```
 akte teak kate
 
 
@@ -27,6 +28,7 @@ alt tal
 
 
 andre rande denar ander
+```
 
 With this assignment, we want to see how you solve programming challenges. You choose the programming language yourself. In the interview, we want you to go through your solution and explain how you solved it.
 
