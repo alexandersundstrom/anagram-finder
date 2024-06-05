@@ -42,8 +42,7 @@ I made an assumption that single letter words, like å and ö, should not be inc
 The solution also has the option to be case sensitive or not, depending on if a string is considered an anagram if the casing is the same. A letter might possibly not be considered the same if the casing is different.
 
 ### Improvements
-I would look at adding some logs where it might be usefull. I would also look at checking response time
-for getting the anagrams to analyse the effienency of the code.
+I would look at adding some logs where it might be usefull.
 
 I like that the code now is clear, and separated so each step can be tested. If the code needs to be optimised, 
 one possible optimization would be to reduce the number of iterations over all the strings. 
@@ -56,7 +55,7 @@ It would be interesting to look at other solutions to get inspiration on how to 
 
 ## Run
 
-Start the main method in Main to get the results in the terminal.
+Start the main method in Main to get the results in the terminal, including the response time for the whole operation.
 
 ## Tests
 There are junit tests that can be executed for the utils used.
